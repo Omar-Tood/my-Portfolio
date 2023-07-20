@@ -1,6 +1,24 @@
 import React from "react";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_7opz5qx', 'template_v8a6h7d', form.current, '1lvSMLK25khKCWi9K')
+      .then((result) => {
+          console.log(result.text);
+          console.log("Massage Succefully😍")
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
+
+
   const contact_info = [
     { logo: "mail", text: "omarjibrilabdulkhadir" },
     { logo: "logo-whatsapp", text: "+252617014906" },
@@ -21,7 +39,7 @@ const Contact = () => {
           className="mt-16 flex md:flex-row flex-col
          gap-6 max-w-5xl bg-gray-800 md:p-6 p-2 rounded-lg mx-auto"
         >
-          <form className="flex flex-col flex-1 gap-5">
+          <form ref={form} onSubmit={sendEmail}className="flex flex-col flex-1 gap-5">
             <input type="text" placeholder="Your Name" />
             <input type="Email" placeholder="Your Email Address" />
             <textarea placeholder="Your Message" rows={10}></textarea>
