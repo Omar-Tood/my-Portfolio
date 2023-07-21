@@ -43,7 +43,7 @@ const Contact = () => {
             <input type="text" placeholder="Your Name" name="user_name" />
             <input type="Email" placeholder="Your Email Address" name="user_email" />
             <textarea placeholder="Your Message" rows={10}></textarea>
-            <button className="btn-primary w-fit">Send Message</button>
+            <button type="submit" className="btn-primary w-fit">Send Message</button>
           </form>
           <div className="flex flex-col  gap-7 ">
             {contact_info.map((contact, i) => (
