@@ -1,4 +1,4 @@
-import React from "react";
+
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser'
 
@@ -11,7 +11,7 @@ const Contact = () => {
     emailjs.sendForm('service_7opz5qx', 'template_v8a6h7d', form.current, '1lvSMLK25khKCWi9K')
       .then((result) => {
           console.log(result.text);
-          console.log("Massage Succefully😍")
+          
       }, (error) => {
           console.log(error.text);
       });
@@ -42,8 +42,9 @@ const Contact = () => {
           <form ref={form} onSubmit={sendEmail}className="flex flex-col flex-1 gap-5">
             <input type="text" placeholder="Your Name" name="user_name" />
             <input type="Email" placeholder="Your Email Address" name="user_email" />
-            <textarea placeholder="Your Message" rows={10}></textarea>
-            <button type="submit" className="btn-primary w-fit">Send Message</button>
+            <textarea placeholder="Your Message" name="message" rows={10}></textarea>
+            {/* <button type="submit" className="btn-primary w-fit">Send Message</button> */}
+            <input type="submit" value="Send" className="btn-primary w-fit cursor-pointer" />
           </form>
           <div className="flex flex-col  gap-7 ">
             {contact_info.map((contact, i) => (
