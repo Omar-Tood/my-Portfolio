@@ -1,23 +1,47 @@
-
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser'
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
-  const form = useRef();
+  // const [userName , setUserName] = useState();
+  // const [email , setEmail] = useState();
+  // const [massage , setMassage] = useState();
 
+  const form = useRef();
+ 
   const sendEmail = (e) => {
     e.preventDefault();
+   
+   
+    // console.log(form.current)
 
-    emailjs.sendForm('service_7opz5qx', 'template_v8a6h7d', form.current, '1lvSMLK25khKCWi9K')
-      .then((result) => {
-          console.log(result.text);
+    emailjs
+      .sendForm(
+        "service_7opz5qx",
+        "template_v8a6h7d",
+         form.current,
+        "1lvSMLK25khKCWi9K"
+      )
+      
+      .then(
+        (result) => {
+          toast.success("Email Send Successfull!", {
+            position: "top-right",
+            autoClose: 5000,
           
-      }, (error) => {
+          });
+          form.current.reset();
+          // setUserName(null)
+          // setEmail(null)
+          // setMassage(null)
+          
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
   };
-
-
 
   const contact_info = [
     { logo: "mail", text: "omarjibrilabdulkhadir" },
@@ -39,12 +63,31 @@ const Contact = () => {
           className="mt-16 flex md:flex-row flex-col
          gap-6 max-w-5xl bg-gray-800 md:p-6 p-2 rounded-lg mx-auto"
         >
-          <form ref={form} onSubmit={sendEmail}className="flex flex-col flex-1 gap-5">
-            <input type="text" placeholder="Your Name" name="user_name" />
-            <input type="Email" placeholder="Your Email Address" name="user_email" />
-            <textarea placeholder="Your Message" name="message" rows={10}></textarea>
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="flex flex-col flex-1 gap-5"
+          >
+            <input  type="text" placeholder="Your Name" name="user_name" />
+            <input
+            
+              type="Email"
+              placeholder="Your Email Address"
+              name="user_email"
+            />
+            <textarea
+            
+              placeholder="Your Message"
+              name="message"
+              rows={10}
+            ></textarea>
             {/* <button type="submit" className="btn-primary w-fit">Send Message</button> */}
-            <input type="submit" value="Send" className="btn-primary w-fit cursor-pointer" />
+            <input
+              type="submit"
+              value="Send"
+              className="btn-primary w-fit cursor-pointer"
+            />
+            <ToastContainer />
           </form>
           <div className="flex flex-col  gap-7 ">
             {contact_info.map((contact, i) => (

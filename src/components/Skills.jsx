@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Skills = () => {
   const skills = [
     {
@@ -26,7 +27,8 @@ const Skills = () => {
       logo: "logo-javascript",
       level: "Intermidate",
       count: 75,
-    }
+    },
+  
   ];
   return (
     <section id="skills" className="py-10 bg-gray-800 relative">
@@ -56,6 +58,8 @@ const Skills = () => {
           ))}
         </div>
       </div>
+
+    
     </section>
   );
 };
