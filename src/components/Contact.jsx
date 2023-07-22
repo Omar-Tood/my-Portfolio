@@ -4,44 +4,68 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
-  // const [userName , setUserName] = useState();
-  // const [email , setEmail] = useState();
-  // const [massage , setMassage] = useState();
+  const [userName , setUserName] = useState("");
+  const [email , setEmail] = useState("");
+  const [message , setMessage] = useState("");
 
   const form = useRef();
+
+
  
-  const sendEmail = (e) => {
-    e.preventDefault();
+     const sendEmail = (e) => {
+
+
+       e.preventDefault();
+
+       if(userName == "" && email == "" && message == ""){
+        toast.error("Please fill all the fields");
+       }
+       else{
+          
+    // console.log(form.current)
+  
+          
+    emailjs
+    .sendForm(
+      "service_7opz5qx",
+      "template_v8a6h7d",
+       form.current,
+      "1lvSMLK25khKCWi9K"
+    )
+    
+    .then(
+      (result) => {
+        toast.success("Email Send Successfull!", {
+          position: "top-right",
+          autoClose: 5000,
+
+         
+        
+        });
+        // form.current.reset();
+        setUserName("")
+        setEmail("")
+        setMessage("")
+        
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+        
+       }
    
    
     // console.log(form.current)
 
-    emailjs
-      .sendForm(
-        "service_7opz5qx",
-        "template_v8a6h7d",
-         form.current,
-        "1lvSMLK25khKCWi9K"
-      )
-      
-      .then(
-        (result) => {
-          toast.success("Email Send Successfull!", {
-            position: "top-right",
-            autoClose: 5000,
-          
-          });
-          form.current.reset();
-          // setUserName(null)
-          // setEmail(null)
-          // setMassage(null)
-          
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
   };
+
+  //  setUserName("")
+  //  setEmail("")
+  //  setMessage("")
+  
+ 
+ 
 
   const contact_info = [
     { logo: "mail", text: "omarjibrilabdulkhadir" },
@@ -68,15 +92,18 @@ const Contact = () => {
             onSubmit={sendEmail}
             className="flex flex-col flex-1 gap-5"
           >
-            <input  type="text" placeholder="Your Name" name="user_name" />
+            <input onChange={(e)=> setUserName(e.target.value)} value={userName} type="text" placeholder="Your Name" name="user_name" />
             <input
-            
+              onChange={(e)=> setEmail(e.target.value)}
+              value={email}
               type="Email"
               placeholder="Your Email Address"
               name="user_email"
             />
             <textarea
-            
+             
+              value={message}
+              onChange={(e)=> setMessage(e.target.value)}
               placeholder="Your Message"
               name="message"
               rows={10}
