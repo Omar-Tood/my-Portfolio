@@ -10,7 +10,7 @@ const Skills = () => {
     },
     {
       logo: "logo-css3",
-      level: "Intermidate",
+      level: "Intermediate",
       count: 70,
     },
     {
@@ -25,9 +25,16 @@ const Skills = () => {
     },
     {
       logo: "logo-javascript",
-      level: "Intermidate",
+      level: "Intermediate",
       count: 75,
     },
+    {
+      logo: "logo-sass",
+      level: "Beginner",
+      count: 55
+    },
+  
+
   
   ];
   return (

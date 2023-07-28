@@ -36,7 +36,7 @@ const Contact = () => {
     .then(
       (result) => {
         toast.success("Email Send Successfull!", {
-          position: "top-right",
+          position: "top-left",
           autoClose: 5000,
 
          

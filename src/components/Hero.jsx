@@ -25,6 +25,11 @@ const Hero = () => {
     <a href="#" target="_blank"  key={4}
     className="text-gray-600 hover:text-white cursor-pointer ">
     <ion-icon name={"logo-twitter"}></ion-icon>
+  </a>,
+
+    <a href="https://www.youtube.com/@ENGROMAR/videos" target="_blank"  key={4}
+    className="text-gray-600 hover:text-white cursor-pointer ">
+    <ion-icon name={"logo-youtube"}></ion-icon>
   </a>
 
   
@@ -50,7 +55,7 @@ const Hero = () => {
           <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600">
             Fullstack Developer
           </h4>
-          <button className="btn-primary mt-8">Contact Me</button>
+          <button className="btn-primary mt-8"><a href="#contact">Contact Me !</a></button>
           <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
             {social_media?.map((media) => {
               return media;

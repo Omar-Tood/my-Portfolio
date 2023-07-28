@@ -20,7 +20,7 @@ const Hireme = () => {
             will get this job as expected and I will work for my value and I
             will not get paid!😘
           </p>
-          <button className="btn-primary mt-10">Say Hello</button>
+          <button className="btn-primary mt-10"><a href="https://wa.link/ygxk7d">Say Hello</a></button>
         </div>
         <img
           src={hireMe}

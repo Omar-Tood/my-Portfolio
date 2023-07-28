@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import project1 from "../assets/images/Expense-tracker-projec1.png";
 import project2 from "../assets/images/fecbook-clone-projec3.png";
 import project3 from "../assets/images/Linked-clone-projec2.png";
+import project4 from "../assets/images/project4.png";
 
 import project_person from "../assets/images/Hireme1.png";
 import "swiper/css";
@@ -28,6 +29,12 @@ const Project = () => {
       name: "Linked-Clone",
       github_link: "https://github.com/Engr-Pirlo/Linked-Clone",
       live_link: "https://linked-clone12.vercel.app/",
+    },
+    {
+      img: project4,
+      name:  "Netflix-Clone",
+      github_link: "https://github.com/Engr-Pirlo/Netflix-Clone",
+      live_link: "https://netflix-clone-two-puce.vercel.app/"
     },
    
   ];
