@@ -5,7 +5,7 @@ import project2 from "../assets/images/fecbook-clone-projec3.png";
 import project3 from "../assets/images/Linked-clone-projec2.png";
 import project4 from "../assets/images/project4.png";
 
-import project_person from "../assets/images/Hireme1.png";
+import project_person from "../assets/images/omar-Tood.png";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper";

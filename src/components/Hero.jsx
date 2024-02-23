@@ -1,5 +1,5 @@
 import React from "react";
-import myHero from "../assets/images/myHero.png";
+import myHero from "../assets/images/software.png";
 const Hero = () => {
   const social_media = [
     // "logo-instagram",
