@@ -4,12 +4,12 @@ import React from "react";
 const Skills = () => {
   const skills = [
     {
-      logo: "logo-html5",
+      logo: "logo-mongodb",
       level: "Advance",
       count: 95,
     },
     {
-      logo: "logo-css3",
+      logo: "logo-prisma",
       level: "Intermediate",
       count: 70,
     },
@@ -19,12 +19,12 @@ const Skills = () => {
       count: 20,
     },
     {
-      logo: "logo-react",
+      logo: "logo-nextjs",
       level: "Beginner",
       count: 30,
     },
     {
-      logo: "logo-javascript",
+      logo: "logo-Typescript",
       level: "Intermediate",
       count: 75,
     },
