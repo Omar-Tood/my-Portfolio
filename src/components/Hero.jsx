@@ -12,22 +12,22 @@ const Hero = () => {
     <ion-icon name={"logo-instagram"}></ion-icon>
   </a>,
   
-    <a href="https://www.facebook.com/cumar.pirlo.75" target="_blank" key={2}
+    <a href="https://www.facebook.com/Omar.Toodka/" target="_blank" key={2}
     className="text-gray-600 hover:text-white cursor-pointer ">
     <ion-icon name={"logo-facebook"}></ion-icon>
   </a>,
 
-    <a href="#"target="_blank"  key={3}
+    <a href="https://www.linkedin.com/in/omar-jibril-abdulkhadir-6147a5270/"target="_blank"  key={3}
     className="text-gray-600 hover:text-white cursor-pointer ">
     <ion-icon name={"logo-linkedin"}></ion-icon>
   </a>,
 
-    <a href="#" target="_blank"  key={4}
+    <a href="https://twitter.com/OMARJIBRII" target="_blank"  key={4}
     className="text-gray-600 hover:text-white cursor-pointer ">
     <ion-icon name={"logo-twitter"}></ion-icon>
   </a>,
 
-    <a href="https://www.youtube.com/@ENGROMAR/videos" target="_blank"  key={4}
+    <a href="https://www.youtube.com/@Omar-Tood/videos" target="_blank"  key={4}
     className="text-gray-600 hover:text-white cursor-pointer ">
     <ion-icon name={"logo-youtube"}></ion-icon>
   </a>
